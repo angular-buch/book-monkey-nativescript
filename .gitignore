@@ -8,7 +8,6 @@
 /node_modules
 /platforms
 /hooks
-/app/App_Resources
 
 # IDEs and editors
 /.idea
