@@ -1,0 +1,81 @@
+<ScrollView>
+  <StackLayout *ngIf="book" orientation="vertical" horizontalAlignment="center" class="ui grid">
+        <Image *ngIf="book.thumbnails"
+                  class="ui large image"
+                  [src]="book?.thumbnails && book?.thumbnails[0].url"
+                  >
+        </Image>
+        <Label [text]="book?.title" class="header" textWrap="true" class="ui header"></Label>
+        <Label [text]="book?.subtitle" class="description" textWrap="true" class="ui subheader"></Label>
+        <GridLayout columns="*, *" rows="auto,auto">
+          <StackLayout col="0" row="0" orientation="vertical">
+            <Label text="Autoren"></Label>
+            <Label *ngFor="let author of book.authors; let l=last" [text]="author + (!l ? ', ' : '')"></Label>
+          </StackLayout>
+          <StackLayout col="1" row="0" orientation="vertical">
+            <Label text="ISBN"></Label>
+            <Label [text]="book?.isbn" class="description" textWrap="true"></Label>
+          </StackLayout>
+          <StackLayout col="0" row="1" orientation="vertical">
+            <Label text="Erschienen"></Label>
+            <Label [text]="book?.published" textWrap="true"></Label>
+          </StackLayout>
+          <StackLayout col="1" row="1" orientation="vertical">
+            <Label text="Rating"></Label>
+            <Label [text]="book?.rating" textWrap="true"></Label>
+          </StackLayout>
+        </GridLayout>   
+        <StackLayout orientation="vertical">
+          <Label text="Beschreibung"></Label>
+          <Label [text]="book?.description" textWrap="true" ></Label>
+        </StackLayout>
+        <Button text="Buch löschen" class="ui red button" (tap)="removeBook()"></Button>
+  </StackLayout>
+</ScrollView>
+
+<!--
+<div class="ui grid" *ngIf="book">
+  <div class="four wide column">
+    <img class="ui large image" [src]="book?.thumbnails && book?.thumbnails[0].url">
+  </div>
+  <div class="twelve wide column">
+    <h1 class="ui header">{{ book?.title }}</h1>
+    <h3 class="ui header">{{ book?.subtitle }}</h3>
+    <div class="ui divider"></div>
+    <div class="ui grid">
+      <div class="four wide column">
+        <h4 class="ui header">Autoren</h4>
+        <span *ngFor="let author of book?.authors; let l=last">
+          {{ author }}<span *ngIf="!l">, </span>
+        </span>
+      </div>
+      <div class="four wide column">
+        <h4 class="ui header">ISBN</h4>
+        {{ book?.isbn }}
+      </div>
+      <div class="four wide column">
+        <h4 class="ui header">Erschienen</h4>
+        {{ book?.published }}
+      </div>
+      <div class="four wide column">
+        <h4 class="ui header">Rating</h4>
+        <i *ngFor="let r of getRating(book?.rating)" class="yellow star icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="sixteen wide column">
+    <h3 class="ui header">Beschreibung</h3>
+    {{ book?.description }}
+  </div>
+  <div class="sixteen wide column">
+    <div class="ui small images">
+      <img *ngFor="let thumbnail of book?.thumbnails" [src]="thumbnail.url">
+    </div>
+  </div>
+</div>
+
+<button class="ui tiny red labeled icon button"
+        (click)="removeBook()">
+  <i class="remove icon"></i> Buch löschen
+</button>
+-->

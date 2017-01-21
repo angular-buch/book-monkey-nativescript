@@ -1,0 +1,24 @@
+<GridLayout columns="auto,*" rows="auto,auto,auto,auto" class="content">
+  <Image col="0" rowSpan="4" *ngIf="book.thumbnails" class="ui tiny image" [src]="book.thumbnails[0].url"></Image>
+  <Label col="1" row="0" [text]="book.title" class="header"></Label>
+  <Label col="1" row="1" [text]="book.subtitle" class="description"></Label>
+  <StackLayout col="1" row="2" orientation="horizontal" class="metadata">
+    <Label  *ngFor="let author of book.authors; let l=last" [text]="author + (!l ? ', ' : '')"></Label>
+  </StackLayout>
+  <Label col="1" row="3" [text]="'ISBN ' + book.isbn" class="metadata"></Label>
+</GridLayout>
+<!--
+<img class="ui tiny image"
+     *ngIf="book.thumbnails"
+     [src]="book.thumbnails[0].url">
+<div class="content">
+  <div class="header">{{ book.title }}</div>
+  <div class="description">{{ book.subtitle }}</div>
+  <div class="metadata">
+    <span *ngFor="let author of book.authors; let l=last">
+      {{ author }}<span *ngIf="!l">, </span>
+    </span>
+  </div>
+  <div class="extra">ISBN {{ book.isbn }}</div>
+</div>
+-->
