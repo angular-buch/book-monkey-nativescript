@@ -1,17 +1,19 @@
 {
+  "name": "book-monkey-mobile",
+  "version": "0.0.0",
   "description": "BookMonkey Mobile - NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "README.MD",
-  "author": 
-    { "name" : "Julian Steiner"
-    , "email" : "justeine@progress.com"
-    , "url" : ""
+  "author": {
+    "name": "Julian Steiner",
+    "email": "justeine@progress.com",
+    "url": ""
   },
   "repository": "<fill-your-repository-here>",
   "nativescript": {
     "id": "org.nativescript.ngbook",
     "tns-android": {
-      "version": "2.4.1"
+      "version": "2.3.0"
     }
   },
   "dependencies": {

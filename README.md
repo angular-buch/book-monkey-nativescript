@@ -7,8 +7,15 @@ Only the markup had to be substantially changed. The components and modules are 
 ## Setup
 
 Clone
+
+Install nativescript:
+
+```
+npm install -g nativescript
+```
+
 Then run 
-`tns platform add angular` OR
+`tns platform add android` OR
 `tns platform add ios`
 
 and then `npm install`
