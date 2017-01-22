@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   selector: 'bm-root',
   templateUrl: './app.component.html'
 })
-
 export class AppComponent { }
