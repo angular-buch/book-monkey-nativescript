@@ -1,6 +1,5 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
-import { FormsModule } from '@angular/forms';
 import { NativeScriptHttpModule  } from 'nativescript-angular/http'; // NEW
 
 import { AppComponent } from './app.component';
@@ -22,7 +21,6 @@ import { AppRoutingModule } from './app-routing.module';
     ],
     imports: [
         NativeScriptModule,
-        FormsModule,
         NativeScriptHttpModule, // NEW
         AppRoutingModule
     ],

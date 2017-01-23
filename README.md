@@ -20,4 +20,8 @@ Then run
 
 and then `npm install`
 
-All set! You can now run the app using `tns run <PLATFORM>` or `tns livesync <PLATFORM> --watch`
+All set! You can now run the app using
+
+* `tns run <PLATFORM>` (which requires a connected device) or 
+* `tns livesync <PLATFORM> --watch` (which requires a connected device) or 
+* `tns run <PLATFORM> --emulator` (which requires a running emulator)
