@@ -11,7 +11,7 @@
   },
   "repository": "<fill-your-repository-here>",
   "nativescript": {
-    "id": "org.nativescript.ngbook",
+    "id": "org.nativescript.bookmonkeymobile",
     "tns-android": {
       "version": "2.3.0"
     }
