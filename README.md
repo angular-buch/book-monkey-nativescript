@@ -31,4 +31,4 @@ Run `tns device` and/or run `tns doctor` to check your setup.
 
 Screenshots for visual reference:
 
-<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/Sidesync_capture_20170124222530_1.jpg" width="320" alt="Book list"/>
+<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/list_nexus.png" width="320" alt="Book list"/>
