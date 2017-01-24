@@ -8,7 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.ngbook" 
+    applicationId = "org.nativescript.book-monkey-mobile" 
     
     //override supported platforms
     // ndk {
