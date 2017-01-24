@@ -30,4 +30,5 @@ All set! You can now run the app using
 Run `tns device` and/or run `tns doctor` to check your setup.
 
 Screenshots for visual reference:
+
 <img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/Sidesync_capture_20170121024058_1.jpg" width="320" alt="Book list"/>
