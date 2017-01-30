@@ -4,6 +4,14 @@ This app was directly derived from an Angular web application example in this re
 https://github.com/book-monkey2-build/iteration-3-http
 Only the markup had to be substantially changed. The components and modules are almost the same and the service layer is entirely untouched.
 
+
+## Screenshots for visual reference:
+
+<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/home_nexus.png" width="285" alt="Home"/>
+<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/list_nexus.png" width="285" alt="Book list"/>
+<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/details_nexus.png" width="285" alt="Book Details"/>
+
+
 ## Setup
 
 Clone the repository
@@ -33,9 +41,3 @@ All set! You can now run the app using
 * `tns livesync <PLATFORM> --watch` (which requires a connected device or a running `--emulator`) 
 
 Run `tns device` and/or run `tns doctor` to check your setup.
-
-## Screenshots for visual reference:
-
-<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/home_nexus.png" width="285" alt="Home"/>
-<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/list_nexus.png" width="285" alt="Book list"/>
-<img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/details_nexus.png" width="285" alt="Book Details"/>
