@@ -6,7 +6,12 @@ Only the markup had to be substantially changed. The components and modules are 
 
 ## Setup
 
-Clone
+Clone the repository
+
+```
+git clone https://github.com/angular-buch/book-monkey-nativescript.git
+cd book-monkey-nativescript
+```
 
 Install nativescript:
 
@@ -16,8 +21,8 @@ npm install -g nativescript
 
 If you're unsure about setting up your Android SDK or Xcode please refer to this guide: http://docs.nativescript.org/angular/start/quick-setup
 
-Then run 
-`tns platform add android` OR
+Then run  
+`tns platform add android` OR  
 `tns platform add ios`
 
 and then `npm install`
