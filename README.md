@@ -29,7 +29,7 @@ All set! You can now run the app using
 
 Run `tns device` and/or run `tns doctor` to check your setup.
 
-Screenshots for visual reference:
+## Screenshots for visual reference:
 
 <img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/home_nexus.png" width="285" alt="Home"/>
 <img src="https://github.com/angular-buch/book-monkey-nativescript/blob/master/screenshots/list_nexus.png" width="285" alt="Book list"/>
