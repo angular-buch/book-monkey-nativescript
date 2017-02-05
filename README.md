@@ -37,7 +37,13 @@ and then `npm install`
 
 All set! You can now run the app using
 
-* `tns run <PLATFORM>` (which requires a connected device or running `--emulator`) or 
-* `tns livesync <PLATFORM> --watch` (which requires a connected device or a running `--emulator`) 
+* `tns run <PLATFORM>` (which requires a connected device) or 
+* `tns run <PLATFORM> --emulator` (which requires a running emulator)
+
+In example, the following command runs the project on the android emulator:
+
+```
+tns run android --emulator
+```
 
 Run `tns device` and/or run `tns doctor` to check your setup.
