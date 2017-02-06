@@ -4,7 +4,6 @@ you would like to apply to your entire application. Check out
 http://docs.nativescript.org/ui/styling for a full list of the CSS
 selectors and properties you can use to style UI components.
 
-/*
 For example, the following CSS rule changes the font size of all UI
 components that have the btn class name.
 */
@@ -23,12 +22,10 @@ components that have the btn class name.
     height: auto;
     font-size: 0.85714286rem;    
 }
-
 .ui.red.button {
     background-color: #DB2828;
     color: white;
 }
-
 .book-details {
     padding: 8;
 }
@@ -68,7 +65,8 @@ components that have the btn class name.
 } 
 .ui.grid label {
     font-size: 12;
-}  
+}
+
 /*
 In many cases you may want to use the NativeScript core theme instead
 of writing your own CSS rules. For a full list of class names in the theme
