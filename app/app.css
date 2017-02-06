@@ -1,75 +1,70 @@
 /*
-In NativeScript, the app.css file is where you place CSS rules that
-you would like to apply to your entire application. Check out
-http://docs.nativescript.org/ui/styling for a full list of the CSS
-selectors and properties you can use to style UI components.
+In NativeScript, the app.css file is where you place CSS rules
+that you would like to apply to your entire application.
 
-For example, the following CSS rule changes the font size of all UI
-components that have the btn class name.
+For example, the following CSS rule changes the font size of all
+UI components that have the btn class name.
 */
 .btn {
-    font-size: 18;
+  font-size: 18;
 }
 .ui.tiny.image {
-    width: 60px;
-    margin-right:5;
-    height: auto;
-    font-size: 0.85714286rem;
+  width: 60px;
+  margin-right:5;
+  height: auto;
+  font-size: 0.85714286rem;
 }
 .ui.large.image {
-    width: 100px;
-    margin-right:5;
-    height: auto;
-    font-size: 0.85714286rem;    
+  width: 100px;
+  margin-right:5;
+  height: auto;
+  font-size: 0.85714286rem;  
 }
 .ui.red.button {
-    background-color: #DB2828;
-    color: white;
+  background-color: #DB2828;
+  color: white;
 }
 .book-details {
-    padding: 8;
+  padding: 8;
 }
 .active {
-    background-color: gray;
-    color:white;
+  background-color: gray;
+  color:white;
 }
 .content .header{
-    line-height: 1.3em;
-    font-weight:bold;
-}
-.content .description{
+  line-height: 1.3em;
+  font-weight:bold;
 }
 .content .metadata{
-    color:darkgray;
+  color:darkgray;
 }
 .item {
-    background-color: #fcfcfc;
-    padding:5;
-    margin-top: 5;
-    margin-bottom: 5;
+  background-color: #fcfcfc;
+  padding:5;
+  margin-top: 5;
+  margin-bottom: 5;
 }
 .heading {
-    line-height: 1.2857em;
-    font-size: 20;
-    font-weight: normal;
+  line-height: 1.2857em;
+  font-size: 20;
+  font-weight: normal;
 }
 .ui.grid .ui.header{
-    line-height: 1.2857em;
-    font-size: 20;
-    font-weight: bold;
+  line-height: 1.2857em;
+  font-size: 20;
+  font-weight: bold;
 } 
 .ui.grid .ui.subheader{
-    line-height: 1.2857em;
-    font-size: 16;
-    font-weight: normal;
+  line-height: 1.2857em;
+  font-size: 16;
+  font-weight: normal;
 } 
 .ui.grid label {
-    font-size: 12;
+  font-size: 12;
 }
 
 /*
-In many cases you may want to use the NativeScript core theme instead
-of writing your own CSS rules. For a full list of class names in the theme
-refer to http://docs.nativescript.org/ui/theme.
+In many cases you may want to use the NativeScript core theme
+instead of writing your own CSS rules.
 */
 @import 'nativescript-theme-core/css/core.light.css';
