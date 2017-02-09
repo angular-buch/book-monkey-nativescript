@@ -5,7 +5,7 @@ import { BookStoreService } from '../shared/book-store.service';
 
 @Component({
   selector: 'bm-book-list',
-  templateUrl: './book-list/book-list.component.html'
+  templateUrl: '<TEX>\bfseries ./book-list/</TEX>book-list.component.html'
 })
 export class BookListComponent implements OnInit {
   books: Book[];
