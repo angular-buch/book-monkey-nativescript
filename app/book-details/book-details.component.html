@@ -10,7 +10,7 @@
         <GridLayout columns="*, *" rows="auto,auto">
           <StackLayout col="0" row="0" orientation="vertical">
             <Label text="Autoren"></Label>
-            <Label *ngFor="let author of book.authors; let l=last" [text]="author + (!l ? ', ' : '')"></Label>
+            <Label *ngFor="let author of book.authors; last as l" [text]="author + (!l ? ', ' : '')"></Label>
           </StackLayout>
           <StackLayout col="1" row="0" orientation="vertical">
             <Label text="ISBN"></Label>
