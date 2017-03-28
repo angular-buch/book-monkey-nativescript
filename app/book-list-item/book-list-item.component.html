@@ -3,7 +3,7 @@
   <Label col="1" row="0" [text]="book.title" class="header"></Label>
   <Label col="1" row="1" [text]="book.subtitle" class="description"></Label>
   <StackLayout col="1" row="2" orientation="horizontal" class="metadata">
-    <Label  *ngFor="let author of book.authors; let l=last" [text]="author + (!l ? ', ' : '')"></Label>
+    <Label  *ngFor="let author of book.authors; last as l" [text]="author + (!l ? ', ' : '')"></Label>
   </StackLayout>
   <Label col="1" row="3" [text]="'ISBN ' + book.isbn" class="metadata"></Label>
 </GridLayout>
