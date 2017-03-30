@@ -8,7 +8,7 @@
     <StackLayout class="bm-book-list-item item"
         *ngFor="let b of books"
         [book]="b"
-        [nsRouterLink]="['books', b.isbn]">
+        [nsRouterLink]="b.isbn">
     </StackLayout>
     <ActivityIndicator [busy]="!books"></ActivityIndicator>
     <Label *ngIf="books && !books.length" text="Es wurden noch keine Bücher eingetragen."></Label>
