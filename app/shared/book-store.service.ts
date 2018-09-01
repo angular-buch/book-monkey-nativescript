@@ -18,7 +18,7 @@ export class BookStoreService {
     this.headers.append('Content-Type', 'application/json');
   }
 
-  getAll(): Observable<Array<Book>> {
+  getAll(): Observable<Book[]> {
     return this.http
       .get(`${this.api}/books`)
       .retry(3)
