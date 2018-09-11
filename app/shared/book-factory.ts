@@ -3,20 +3,29 @@ import { Book } from './book';
 export class BookFactory {
 
   static empty(): Book {
-    return new Book('', '', [''], new Date(), '', 0, [{url: '', title: ''}], '');
+    return {
+      isbn: '',
+      title: '',
+      authors: [''],
+      published: new Date(),
+      subtitle: '',
+      rating: 0,
+      thumbnails: [{url: '', title: ''}],
+      description: ''
+    };
   }
 
-  static fromObject(rawBook: any): Book {
-    return new Book(
-      rawBook.isbn,
-      rawBook.title,
-      rawBook.authors,
-      typeof(rawBook.published) === 'string' ?
-        new Date(rawBook.published) : rawBook.published,
-      rawBook.subtitle,
-      rawBook.rating,
-      rawBook.thumbnails,
-      rawBook.description,
-    );
+  static fromObject(b: Book | any): Book {
+    return {
+      isbn: b.isbn,
+      title: b.title,
+      authors: b.authors,
+      published: typeof(b.published) === 'string' ?
+        new Date(b.published) : b.published,
+      subtitle: b.subtitle,
+      rating: b.rating,
+      thumbnails: b.thumbnails,
+      description: b.description
+    };
   }
 }

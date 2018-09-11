@@ -1,62 +1,66 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/retry';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+import { HttpClient } from '@angular/common/http';
+import { retry, map, catchError } from 'rxjs/operators';
+
 
 import { Book } from './book';
 import { BookFactory } from './book-factory';
 
 @Injectable()
 export class BookStoreService {
-  private api: string = 'https://book-monkey2-api.angular-buch.com';
-  private headers: Headers = new Headers();
+  private api = 'https://book-monkey2-api.angular-buch.com';
 
-  constructor(private http: Http) {
-    this.headers.append('Content-Type', 'application/json');
-  }
+  constructor(private http: HttpClient) {}
 
   getAll(): Observable<Book[]> {
     return this.http
-      .get(`${this.api}/books`)
-      .retry(3)
-      .map(response => response.json())
-      .map(rawBooks => rawBooks
-        .map(rawBook => BookFactory.fromObject(rawBook))
-      )
-      .catch(this.errorHandler);
+      .get<Book[]>(`${this.api}/books`)
+      .pipe(
+        retry(3),
+        map(rawBooks => rawBooks
+          .map(rawBook => BookFactory.fromObject(rawBook)),
+        ),
+        catchError(this.errorHandler)
+      );
   }
 
   getSingle(isbn: string): Observable<Book> {
     return this.http
-      .get(`${this.api}/book/${isbn}`)
-      .retry(3)
-      .map(response => response.json())
-      .map(rawBook => BookFactory.fromObject(rawBook))
-      .catch(this.errorHandler);
+      .get<Book>(`${this.api}/book/${isbn}`)
+      .pipe(
+        retry(3),
+        map(rawBook => BookFactory.fromObject(rawBook)),
+        catchError(this.errorHandler)
+      );
   }
 
   create(book: Book): Observable<any> {
     return this.http
-      .post(`${this.api}/book`, JSON.stringify(book), { headers: this.headers })
-      .catch(this.errorHandler);
+      .post(`${this.api}/book`, book, { responseType: 'text' })
+      .pipe(
+        catchError(this.errorHandler)
+      );
   }
 
   update(book: Book): Observable<any> {
     return this.http
-      .put(`${this.api}/book/${book.isbn}`, JSON.stringify(book), { headers: this.headers })
-      .catch(this.errorHandler);
+      .put(`${this.api}/book/${book.isbn}`, book, { responseType: 'text' })
+      .pipe(
+        catchError(this.errorHandler)
+      );
   }
 
   remove(isbn: string): Observable<any> {
     return this.http
-      .delete(`${this.api}/book/${isbn}`)
-      .catch(this.errorHandler);
+      .delete(`${this.api}/book/${isbn}`, { responseType: 'text' })
+      .pipe(
+        catchError(this.errorHandler)
+      );
   }
 
   private errorHandler(error: Error | any): Observable<any> {
-    return Observable.throw(error);
+    return observableThrowError(error);
   }
 }
