@@ -1,6 +1,6 @@
-<!--TEX:\bfs-->
+<TEX>\bfs</TEX>
 ScrollView>
-  <StackLayout><!--TEX:\bfe-->
+  <StackLayout><TEX>\bfe</TEX>
     <!-- WARNING!
     This uses ngFor which does not result in an optimised
     native component. If you need to display hundreds of items,
@@ -12,6 +12,6 @@ ScrollView>
         [nsRouterLink]="b.isbn">
     </StackLayout>
     <ActivityIndicator [busy]="!books"></ActivityIndicator>
-    <Label *ngIf="books && !books.length" text="Es wurden noch keine Bücher eingetragen."></Label><!--TEX:\bfs-->
+    <Label *ngIf="books && !books.length" text="Es wurden noch keine Bücher eingetragen."></Label><TEX>\bfs</TEX>
   </StackLayout>
-/ScrollView><!--TEX:\bfs-->
+/ScrollView><TEX>\bfs</TEX>

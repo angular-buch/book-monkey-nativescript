@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'bm-home',
-  template: `<!--TEX:\bfs-->
+  template: `<TEX>\bfs</TEX>
     <StackLayout>
       <Label class="heading" text="Home"></Label>
       <Label text="Das ist der BookMonkey"></Label>
       <Button nsRouterLink="../books" text="Buchliste ansehen" class="ui red button"></Button>
-    </StackLayout><!--TEX:\bfe-->
+    </StackLayout><TEX>\bfe</TEX>
   `
 })
 export class HomeComponent { }
